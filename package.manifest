@@ -1,0 +1,25 @@
+﻿{
+    propertyEditors:[
+        {
+            id: '589814C1-2CA1-4598-88C9-E59DA6E253EB',
+            name: 'BWT Textbox Multiple Character Limited',
+            editor: {
+                    view: '~/App_Plugins/BwtTextboxMultipleCharacterLimited/BwtTextboxMultipleCharacterLimited.html'
+                },
+            preValueEditor: {
+                fields: [
+                    {
+                        label: 'Character limit',
+                        description: 'Enter an integer character limit.',
+                        key: 'characterLimit',
+                        view: 'textarea'
+                    }
+                ]
+            }
+        }
+    ]
+    ,
+    javascript: [
+        '~/App_Plugins/BwtTextboxMultipleCharacterLimited/BwtTextboxMultipleCharacterLimited.controller.js'
+    ]
+}

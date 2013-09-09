@@ -1,0 +1,22 @@
+﻿<div ng-controller='My.BwtTextboxMultipleCharacterLimitedController'>
+
+<form name="myForm">
+    <textarea name='lastName' ng-model='model.value' ng-change="change()" ng-maxlength='{{characterLimit}}' style="width:300px; height:200px;"></textarea>
+    <br />
+    <span class="textarea-context-info error" ng-show="myForm.lastName.$error.maxlength">You have exceded the {{characterLimit}} character limit</span>
+    <span class="textarea-context-info valid" ng-show="myForm.lastName.$valid">Characters remaining: {{model.value.length}}/{{characterLimit}}</span>
+</form>
+<!--
+<hr>
+<tt>myForm.lastName.length = {{myForm.lastName.length}}</tt><br>
+
+<tt>user = {{user}}</tt><br/>
+<tt>myForm.lastName.$valid = {{myForm.lastName.$valid}}</tt><br>
+<tt>myForm.lastName.$error = {{myForm.lastName.$error}}</tt><br>
+<tt>myForm.$valid = {{myForm.$valid}}</tt><br>
+<tt>myForm.$error.maxlength = {{!!myForm.$error.maxlength}}</tt><br>
+
+{{model|json}}
+-->
+</div>
+
