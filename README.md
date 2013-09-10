@@ -30,7 +30,7 @@ Plan
 
 - Install Node JS and Karma (see above) - done
 - Build demo datatype - done
-- Get a test or two running to show Node/Karma/Jasmine running, perhaps testing true === true � done (see Test 1 and Test 2)
+- Get a test or two running to show Node/Karma/Jasmine running, perhaps testing true === true - one (see Test 1 and Test 2)
 - Build some proper tests - currently stuck! 
 
 
@@ -46,12 +46,19 @@ Plan
 2. Build demo datatype
 ----------------------------------
 
-This is done and sees to work OK with the following features:
+This is done and sees to work OK with the following features (see images below):
 
 - Number of characters used and character limit are displayed to the user.
 - Exceeding the character limit turns the the property editor label and text below the user input red. In the background AngularJS sets model.value to undefined.
 - If the user attempts to save/publish the node, then a big red horizontal bar across the top of the node indicates the 'property has errors'. I guess Umbraco does this for us.
 
+![Configuring the character limit](http://www.snerpton.net/images-external/git/textbox-multiple-character-limited/Screen%20Shot%202013-09-10%20at%2009.12.55.png)
+
+![Editing data, whilst not exceeding the character limit](http://www.snerpton.net/images-external/git/textbox-multiple-character-limited/Screen%20Shot%202013-09-10%20at%2009.16.51.png)
+
+![Editing data, and exceeding the character limit](http://www.snerpton.net/images-external/git/textbox-multiple-character-limited/Screen%20Shot%202013-09-10%20at%2009.17.10.png)
+
+![Attempting to save data whilst exceeding the character limit](http://www.snerpton.net/images-external/git/textbox-multiple-character-limited/Screen%20Shot%202013-09-10%20at%2009.17.37.png)
 
 
 3. Get a test or two running to show Node/Karma/Jasmine running
