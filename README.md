@@ -61,7 +61,7 @@ This is done and sees to work OK with the following features (see images below):
 ![Attempting to save data whilst exceeding the character limit](http://www.snerpton.net/images-external/git/textbox-multiple-character-limited/Screen%20Shot%202013-09-10%20at%2009.17.37.png)
 
 
-3. Get a test or two running to show Node/Karma/Jasmine running
+3. Get a test or two running to demonstrate Node/Karma/Jasmine installed OK
 ----------------------------------
 
 My Jasmine tests are all contained in the 'test' directory, and I initiate the tests from a command prompt with a working directory at the root of my datatype (i.e. /App_Plugins/BwtTextboxMultipleCharacterLimited):
@@ -108,8 +108,6 @@ and comment the assetsService.loadCss line.
 In Test 3 I now am able to instantiate Ctrl and scope, and initialise the controller with a mock scope. Running the tests yields the same result as shown above in 3).
 
 3. My next step is to introduce the c=true and test c=true code block. I do this to check I have properly configured the controller in this test. It seems I haven't, as running the tests at this stage yields the following error:
-
-
 
 
 	> test\test.bat
