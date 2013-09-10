@@ -16,7 +16,7 @@ The last task of the Umbraco AngularJS/Belle workshop in London last week, was t
 Environment
 ----------------------------------
 - Windows 7 SP1 VM
-- IIS 7.8
+- IIS 7.5
 - SQL Server 2008 R2
 - Node JS 0.10.18
 - Karma 0.10.2
@@ -29,8 +29,8 @@ Plan
 
 1. Install Node JS and Karma (see above) - done
 2. Build demo datatype - done
-3. Get a test or two running to show Node/Karma/Jasmine running, perhaps testing true === true - one (see Test 1 and Test 2)
-4. Build some proper tests - currently stuck! 
+3. Get a test or two running to show Node/Karma/Jasmine running, perhaps testing true === true - done (see Test 1 and Test 2)
+4. Build some proper tests (Test 3) - currently stuck! 
 
 
 
@@ -45,11 +45,12 @@ Plan
 2. Build demo datatype
 ----------------------------------
 
-This is done and sees to work OK with the following features (see images below):
+This is done, and seems to work OK with the following features (see images below):
 
+- Configurable character limit.
 - Number of characters used and character limit are displayed to the user.
 - Exceeding the character limit turns the the property editor label and text below the user input red. In the background AngularJS sets model.value to undefined.
-- If the user attempts to save/publish the node, then a big red horizontal bar across the top of the node indicates the 'property has errors'. I guess Umbraco does this for us.
+- If the user attempts to save/publish the node whilst exceeding the character limit, then a big red horizontal bar across the top of the node indicates the 'property has errors'. I guess Umbraco does this for us.
 
 ![Configuring the character limit](http://www.snerpton.net/images-external/git/textbox-multiple-character-limited/Screen%20Shot%202013-09-10%20at%2009.12.55.png)
 
@@ -77,7 +78,7 @@ If I just run Test 1 and Test 2 by commenting Test 3 in unit_02.js I get the fol
 	INFO [PhantomJS 1.9.1 (Windows 7)]: Connected on socket pBV5RueOkA8cU8O_AgxQ
 	PhantomJS 1.9.1 (Windows 7): Executed 2 of 2 SUCCESS (0.172 secs / 0.006 secs)
 
-Hence, I think I at least have a working node/karma setup.
+Hence, I think I have a working node/karma setup.
 
 My config file is essentially what I found at:
 
@@ -92,9 +93,9 @@ although I have made a few amendments to account for different paths found in th
 
 This is were the problems begin!
 
-First I added an empty Test 3. This doesn't throw any errors, so I think the way I am introducing this test is OK.
+First I added an empty Test 3 (unit_02.js). This doesn't throw any errors, so I think the way I am introducing this test is OK.
 
-My next step is to add bits of the test 3 one by one.
+My next step is to add bits of Test 3 one by one.
 
 Because I don't know if I need to mock the assetService, or at this stage know how to mock the assetsService, I removed reference to it in my controller BwtTextboxMultipleCharacterLimitedController i.e. I register my controller in BwtTextboxMultipleCharacterLimited.controller.js with:
 ```javascript
@@ -134,7 +135,7 @@ I suspect my karma config file karma.conf as I've just blindly used this, and al
 
 Ultimately, I guess I would like to test:
 
-- loading the datatype displays pulls back model.value. I guess I need to mock this service?
+- loading the datatype pulls back model.value. I guess I need to mock this service?
 - exceeding the character limit sets model.value to undefined
 - any other ideas?
 
