@@ -28,18 +28,18 @@ Environment
 Plan
 ----------------------------------
 
-- Install Node JS and Karma (see above) - done
-- Build demo datatype - done
-- Get a test or two running to show Node/Karma/Jasmine running, perhaps testing true === true - one (see Test 1 and Test 2)
-- Build some proper tests - currently stuck! 
+1. Install Node JS and Karma (see above) - done
+2. Build demo datatype - done
+3. Get a test or two running to show Node/Karma/Jasmine running, perhaps testing true === true - one (see Test 1 and Test 2)
+4. Build some proper tests - currently stuck! 
 
 
 
 1. Install Node JS and Karma
 ----------------------------------
 
-- I visited http://nodejs.org and clicked on the big green install button. 
-- This allowed me to install Karma using the command 'npm install -g karma'.
+1. I visited http://nodejs.org and clicked on the big green install button. 
+2. This allowed me to install Karma using the command 'npm install -g karma'.
 
 
 
@@ -93,9 +93,9 @@ although I have made a few amendments to account for different paths found in th
 
 This is were the problems begin!
 
-First I added an empty Test 3. This doesn't throw any errors, so I think the way I am introducing this test is OK.
+1. First I added an empty Test 3. This doesn't throw any errors, so I think the way I am introducing this test is OK.
 
-My next step is to add bits of the test 3 one by one.
+2. My next step is to add bits of the test 3 one by one.
 
 Because I don't know if I need to mock the assetService, or at this stage know how to mock the assetsService, I removed reference to it in my controller BwtTextboxMultipleCharacterLimitedController i.e. I register my controller in BwtTextboxMultipleCharacterLimited.controller.js with:
 ```javascript
@@ -107,7 +107,7 @@ and comment the assetsService.loadCss line.
 
 In Test 3 I now am able to instantiate Ctrl and scope, and initialise the controller with a mock scope. Running the tests yields the same result as shown above in 3).
 
-My next step is to introduce the c=true and test c=true code block. I do this to check I have properly configured the controller in this test. It seems I haven't, as running the tests at this stage yields the following error:
+3. My next step is to introduce the c=true and test c=true code block. I do this to check I have properly configured the controller in this test. It seems I haven't, as running the tests at this stage yields the following error:
 
 
 
