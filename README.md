@@ -108,7 +108,7 @@ and comment the `assetsService.loadCss` line.
 
 In Test 3 I now am able to instantiate Ctrl and scope, and initialise the controller with a mock scope. Running the tests yields the same result as shown above in 3).
 
-My next step is to introduce the `c=true` and test `c=true` code block. I do this to check I have properly configured the controller in this test. It seems I haven't, as running the tests at this stage yields the following error:
+My next step is to introduce the `c = true` and test `c === true` code block. I do this to check I have properly configured the controller in this test. It seems I haven't, as running the tests at this stage yields the following error:
 
 
 	> test\test.bat
@@ -137,7 +137,7 @@ I suspect my karma config file karma.conf as I've just blindly used this, and al
 Ultimately, I guess I would like to test:
 
 - loading the datatype pulls back `model.value` as saved by Umbraco. I guess I need to mock this service?
-- exceeding the character limit sets model.value to undefined
+- exceeding the character limit sets `model.value` to undefined
 - any other ideas?
 
 
