@@ -29,7 +29,7 @@ Plan
 
 1. Install Node JS and Karma (see above) - done
 2. Build demo datatype - done
-3. Get a test or two running to show Node/Karma/Jasmine running, perhaps testing true === true - done (see Test 1 and Test 2)
+3. Get a test or two running to show Node/Karma/Jasmine running, perhaps testing true equals true - done (see Test 1 and Test 2)
 4. Build some proper tests (Test 3) - currently stuck! 
 
 
