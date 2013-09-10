@@ -1,7 +1,7 @@
 textbox-multiple-character-limited
 ==================================
 
-A demo Umbraco Belle 'textbox multiple' datatype, that has a character limit.
+A demo character limited Umbraco Belle 'textbox multiple' datatype.
 
 
 
@@ -10,7 +10,7 @@ A demo Umbraco Belle 'textbox multiple' datatype, that has a character limit.
 
 Aim
 ----------------------------------
-The last task of the Umbraco AngularJS/Belle workshop in London last week, was to build our own datatype. I decided on a textarea with a configurable character limit, as this is something we repeatedly find useful at Blueprint Web Tech. I also decided I would like to be able to unit test the new datatype using Karma/Jamine, as the Angular JS tutorials I've played around with impress the importance of this good practise.
+The last task of the Umbraco AngularJS/Belle workshop in London last week, was to build our own datatype. I decided on a textarea with a configurable character limit, as this is something we repeatedly find useful at Blueprint Web Tech. I also decided I would like to be able to unit test the new datatype using Karma/Jamine, as the Angular JS tutorials I've played around with impress the importance of this as good practise.
 
 
 
@@ -28,10 +28,10 @@ Environment
 Plan
 ----------------------------------
 
-- Install Node JS and Karma (see above) � done
-- Build demo datatype � done
+- Install Node JS and Karma (see above) - done
+- Build demo datatype - done
 - Get a test or two running to show Node/Karma/Jasmine running, perhaps testing true === true � done (see Test 1 and Test 2)
-- Build some proper tests � currently stuck! 
+- Build some proper tests - currently stuck! 
 
 
 
@@ -81,21 +81,21 @@ although I have made a few amendments to account for different paths found in th
 
 
 
-4. Build some proper tests � currently stuck!
+4. Build some proper tests - currently stuck!
 ----------------------------------
 
-This is were the problems begin�
+This is were the problems begin!
 
 First I added an empty Test 3. This doesn't throw any errors, so I think the way I am introducing this test is OK.
 
 My next step is to add bits of the test 3 one by one.
 
 Because I don't know if I need to mock the assetService, or at this stage know how to mock the assetsService, I removed reference to it in my controller BwtTextboxMultipleCharacterLimitedController i.e. I register my controller in BwtTextboxMultipleCharacterLimited.controller.js with:
-
+```javascript
 	angular.module('umbraco')
 		.controller('BwtTextboxMultipleCharacterLimitedController',
 			function ($scope) {
-        
+```        
 and comment the assetsService.loadCss line.
 
 In Test 3 I now am able to instantiate Ctrl and scope, and initialise the controller with a mock scope. Running the tests yields the same result as shown above in 3).
@@ -130,16 +130,17 @@ I suspect my karma config file karma.conf as I've just blindly used this, and al
 
 Ultimately, I guess I would like to test:
 
-� loading the datatype displays pulls back model.value. I guess I need to mock this service?
-� exceeding the character limit sets model.value to undefined
-� any other ideas?
+- loading the datatype displays pulls back model.value. I guess I need to mock this service?
+- exceeding the character limit sets model.value to undefined
+- any other ideas?
 
 
 
-=== Aside ===
+Aside
+----------------------------------
 
 A character limit should be a positive integer, but I wasn't able to set this:
-
+```javascript
 	preValueEditor: {
 		fields: [
 			{
@@ -149,6 +150,6 @@ A character limit should be a positive integer, but I wasn't able to set this:
 				view: 'integer'
 			}
 		]
-
+```
 as the property wouldn't appear when editing the node (see image). This same error happened when setting the view as a textstring. I guess in both instances this is because there is no integer/textarea view in /Umbraco/Views/preValueEditors? My solution was to use a textarea as this is just a demo.
 
