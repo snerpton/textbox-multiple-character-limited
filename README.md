@@ -28,10 +28,10 @@ Environment
 Plan
 ----------------------------------
 
-- Install Node JS and Karma (see above) – done
-- Build demo datatype – done
-- Get a test or two running to show Node/Karma/Jasmine running, perhaps testing true === true – done (see Test 1 and Test 2)
-- Build some proper tests – currently stuck! 
+- Install Node JS and Karma (see above) ï¿½ done
+- Build demo datatype ï¿½ done
+- Get a test or two running to show Node/Karma/Jasmine running, perhaps testing true === true ï¿½ done (see Test 1 and Test 2)
+- Build some proper tests ï¿½ currently stuck! 
 
 
 
@@ -81,10 +81,10 @@ although I have made a few amendments to account for different paths found in th
 
 
 
-4. Build some proper tests – currently stuck!
+4. Build some proper tests ï¿½ currently stuck!
 ----------------------------------
 
-This is were the problems begin…
+This is were the problems beginï¿½
 
 First I added an empty Test 3. This doesn't throw any errors, so I think the way I am introducing this test is OK.
 
@@ -130,9 +130,9 @@ I suspect my karma config file karma.conf as I've just blindly used this, and al
 
 Ultimately, I guess I would like to test:
 
-– loading the datatype displays pulls back model.value. I guess I need to mock this service?
-– exceeding the character limit sets model.value to undefined
-– any other ideas?
+ï¿½ loading the datatype displays pulls back model.value. I guess I need to mock this service?
+ï¿½ exceeding the character limit sets model.value to undefined
+ï¿½ any other ideas?
 
 
 
