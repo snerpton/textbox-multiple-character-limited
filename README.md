@@ -153,3 +153,4 @@ A character limit should be a positive integer, but I wasn't able to set this:
 ```
 as the property wouldn't appear when editing the node (see image). This same error happened when setting the view as a textstring. I guess in both instances this is because there is no integer/textarea view in /Umbraco/Views/preValueEditors? My solution was to use a textarea as this is just a demo.
 
+![preValueEditor view set to integer](http://www.snerpton.net/images-external/git/textbox-multiple-character-limited/Screen%20Shot%202013-09-10%20at%2008.51.23.png)
